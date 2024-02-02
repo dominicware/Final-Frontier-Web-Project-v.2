@@ -1,0 +1,141 @@
+<!DOCTYPE html> <!-- document type declaration / informs browser what doc to expect --> 
+<html lang="en"> <!-- the doc itself begins and ends with this html tag. This one also has a language attribute which specifies the language of the element's content -->
+<head> <!-- a container for metadata. Metadata is data about the document and is not displayed -->
+    <meta charset="UTF-8"> <!-- meta defines data about the html doc. Charset specifies the character encoding for the HTML doc. UTF-8 is standard-->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> X-UA-Compatible is a document mode meta tag that allows web authors to choose what version of Internet Explorer the page should be rendered as. This might be important for the parallax -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport is the users visible area of a webpage. This content is stnadard on all webpages. width=device-width sets the width of the pae to follow the screen width of the device. initial-scale=1.0 is the zoom level when the page first loads-->
+    <title>Final Frontier Comics & Toys</title> <!-- required in every HTML doc. Shown in browser title bar and is important for SEO-->
+    <link href="StyleSheet.css" rel="stylesheet"> <!-- link defines the relationship between the current doc and an external resource. rel specificies the relationship. href attribute specifies a URL of the attribute. type specifies the internet media type of the link.-->
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            width: 100%;
+            padding: 0px;
+            padding-top: 0px;
+            text-align: center;
+            table-layout: fixed;
+        }
+
+        .grid-item {
+            padding: 0.5%;
+        }
+
+        .header{
+            border-bottom: 1px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-item {
+            margin-right: 5rem;
+        }
+
+        .nav-link{
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .nav-link:hover{
+            color: yellow;
+        }
+
+        @media screen and (min-width: 600px) {
+        .grid-container {
+            grid-template-columns: auto auto;
+            grid-template-rows: repeat(3, auto);
+        }
+
+        #sitebanner{
+            content:url("static/images/Final-Frontier-Background-2.png");
+        }
+
+        }
+    </style>
+</head>
+<body style="font-size: 0"> <!-- defines the document's body. Contains all of the contents of the HTML doc such as headings, paragraphs, images, hyperlinks, tables, lists, etc.-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="lYYVgpbV"></script>
+    <div class="header">
+        <img alt="banner" id="sitebanner" src="static/images/Final Frontier Phone Banner.png" width="100%" height="100%">
+    </div>
+    <div class="site" style="height:100%;background-color:#fefefe;">
+        <header class="main-header" style="background-color: #030037">
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="our shops.html" class="nav-link">OUR SHOPS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        
+    <main>
+        <div class="grid-container">
+            <div class="grid-item" padding="0.5%">
+                <a href="new comics 300322.html">
+                    <img alt="new comics" src="static/images/Batman.png" width=100%" height="100%">
+                </a>
+            </div>
+            <div class="grid-item" padding="0.5%">
+                <a href="events.html">
+                    <img alt="events" src="static/images/shop.png" width=100%" height="100%">
+                </a>
+            </div>
+            <div class="grid-item" padding="0.5%">
+                <a href="new toys 300322.html">
+                    <img alt="new toys" src="static/images/toys.png" width=100%" height="100%">
+                </a>
+            </div>
+            <div class="grid-item" padding="0.5%">
+                <a href="recommended reading.html">
+                    <img alt="recommended reading" src="static/images/recommended.png" width=100%" height="100%">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    </div>
+    </div>
+    <footer class="footer" style="font-size: small;">
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/b267315e68ea5bcab72c02d40b409836.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:25%;border:0;overflow:hidden;"></iframe>
+        <div class="fb-page" data-href="https://www.facebook.com/finalfrontierexeter" data-tabs="timeline" data-width="321" data-height="321" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/finalfrontierexeter" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/finalfrontierexeter">Final Frontier - Exeter</a></blockquote></div>
+        <p>Copyright © 2022 Final Frontier.<br>
+    </footer>
+</body>
+</html>
