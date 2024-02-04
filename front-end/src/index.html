@@ -25,49 +25,67 @@
             padding: 0.5%;
         }
 
-        .header{
-            border-bottom: 1px;
-        }
+        /* Theming */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 1.5rem;
-        }
+        :root{
+            --white: #f9f9f9;
+            --black: #36383F;
+            --gray: #85888C;
+        } /* variables*/
 
-        .hamburger {
-            display: none;
+        /* Reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
+        body{
+            background-color: var(--white);
+            font-family: "Poppins", sans-serif;
         }
-
-        .nav-menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-item {
-            margin-right: 5rem;
-        }
-
-        .nav-link{
-            font-size: 1.8rem;
+        a{
             text-decoration: none;
-            color: white;
-            font-family: Tahoma, Geneva, sans-serif;
+        }
+        ul{
+            list-style: none;
+        }
+        /* Header */
+        .header{
+            background-color: var(--black);
+            box-shadow: 1px 1px 5px 0px var(--gray);
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+        /* Logo */
+        .logo{
+            display: inline-block;
+            color: var(--white);
+            font-size: 60px;
+            margin-left: 10px;
         }
 
-        .nav-link:hover{
-            color: yellow;
+        /* Nav menu */
+        .nav{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: var(--black);
+            overflow: hidden;
+
+        }
+        .menu a{
+            display: block;
+            padding: 30px;
+            color: var(--white);
+        }
+        .menu a:hover{
+            background-color: var(--gray);
+        }
+        .nav{
+            max-height: 0;
+            transition: max-height .5s ease-out;
         }
 
         .footer {
@@ -82,6 +100,59 @@
             font-family: Tahoma, Geneva, sans-serif;
         }
 
+        /* Menu Icon */
+        .hamb{
+            cursor: pointer;
+            float: right;
+            padding: 40px 20px;
+        }/* Style label tag */
+
+        .hamb-line {
+            background: var(--white);
+            display: block;
+            height: 2px;
+            position: relative;
+            width: 24px;
+
+        } /* Style span tag */
+
+        .hamb-line::before,
+        .hamb-line::after{
+            background: var(--white);
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+        .hamb-line::before{
+            top: 5px;
+        }
+        .hamb-line::after{
+            top: -5px;
+        }
+
+        .side-menu {
+            display: none;
+        } /* Hide checkbox */
+
+        /* Toggle menu icon */
+        .side-menu:checked ~ nav{
+            max-height: 100%;
+        }
+        .side-menu:checked ~ .hamb .hamb-line {
+            background: transparent;
+        }
+        .side-menu:checked ~ .hamb .hamb-line::before {
+            transform: rotate(-45deg);
+            top:0;
+        }
+        .side-menu:checked ~ .hamb .hamb-line::after {
+            transform: rotate(45deg);
+            top:0;
+        }
+
         @media screen and (min-width: 600px) {
         .grid-container {
             grid-template-columns: auto auto;
@@ -91,35 +162,54 @@
         #sitebanner{
             content:url("static/images/Final-Frontier-Background-2.png");
         }
+
+        .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+        }
+
+        .menu li{
+            float: left;
+        }
+
+        .menu a:hover{
+            background-color: transparent;
+            color: var(--gray);
+
+        }
+
+        .hamb{
+            display: none;
+        }
+
         }
     </style>
 </head>
-<body style="font-size: 0;">
+<body style="font-size: 0; width: 100%;">
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="lYYVgpbV"></script>
         <header class="banner-header">
             <img alt="banner" id="sitebanner" src="static/images/Final Frontier Phone Banner.png" width="100%" height="100%">
         </header>
-        <header class="main-header" style="background-color: #030037">
-            <nav class="navbar">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="our shops.html" class="nav-link">OUR SHOPS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link">CONTACT US</a>
-                    </li>
+        <header class="header" style="font-size: 30px;">
+            <!-- Logo -->
+            <a href="#" class="logo">LR</a>
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <!-- Menu -->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a> </li>
+                    <li><a href="#">About</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
             </nav>
-        </header>     
+        </header>    
     <main>
         <div class="grid-container">
             <div class="grid-item" padding="0.5%">
