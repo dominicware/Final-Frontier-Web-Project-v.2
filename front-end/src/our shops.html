@@ -1,60 +1,97 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<head> 
+<html lang="en">
+<head>
     <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Our Shops | Final Frontier Comics & Toys</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Frontier Comics & Toys | Our Shops</title> 
     <link href="StyleSheet.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            width: 100%;
+            padding: 0px;
+            padding-top: 0px;
+            text-align: center;
+            table-layout: fixed;
+        }
+
+        .grid-item {
+            padding: 0.5%;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (min-width: 600px) {
+        .grid-container {
+            grid-template-columns: auto auto;
+            grid-template-rows: repeat(3, auto);
+        }
+
+        #sitebanner{
+            content:url("static/images/Final-Frontier-Background-2.png");
+        }
+        }
+    </style>
 </head>
-<body> 
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="lYYVgpbV"></script>
-    <div class="parallax"></div> 
-                                 
-    <div class="site" style="height:1000px;background-color:#fefefe;font-size:36px">
-        <header class="main-header" style="background-color: #000000">
-            <nav>
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a>|</a></li>
-                    <li><a href="our shops.html">OUR SHOPS</a></li>
-                    <li><a>|</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
+<body style="font-size: 0;">
+        <header class="banner-header">
+            <img alt="banner" id="sitebanner" src="static/images/Final Frontier Phone Banner.png" width="100%" height="100%">
+        </header>
+        <header class="header" style="font-size: 30px;">
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <!-- Menu -->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our shops.html">Our Shops</a> </li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-        </header>
-        
-    <div>
-        <main>
-            <div class="test-grid">
-                <div class="block">
-                    <p class="subheading">Plymouth</p>
-                    <p class="list">Cornwall Street</p>
-                </div>
-                <div class="block">
-                    <p class="subheading">Exeter</p>
-                    <p class="list">Paris Street</p>
-                </div>
-                <div class="block">
-                    
-                </div>
-                <div class="block">
-
-                </div>
+        </header>    
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="new comics 300322.html">
+                    <img alt="new comics" src="static/images/Batman.png">
+                </a>
             </div>
-        </main>
-    </div>
-
-    </div>
-    </div>
-    <div class="footer">
-        <footer>
-            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/b267315e68ea5bcab72c02d40b409836.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:25%;border:0;overflow:hidden;"></iframe>
-            <div class="fb-page" data-href="https://www.facebook.com/finalfrontierexeter" data-tabs="timeline" data-width="321" data-height="321" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/finalfrontierexeter" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/finalfrontierexeter">Final Frontier - Exeter</a></blockquote></div>
-            <p>Copyright © 2022 Final Frontier.<br>
-        </footer>
-    </div>
+            <div class="grid-item">
+                <a href="events.html">
+                    <img alt="events" src="static/images/shop.png">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="new toys 300322.html">
+                    <img alt="new toys" src="static/images/toys.png">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="recommended reading.html">
+                    <img alt="recommended reading" src="static/images/recommended.png">
+                </a>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="row">
+            <div class="column">
+                <img src="static/images/insta.png" id="insta-logo" alt="instagram">
+            </div>
+            <div class="column">
+                <img src="static/images/fb.png" id="fb-logo" alt="facebook">   
+            </div>
+            <div class="column">
+                <img src="static/images/fbmess.png" id="fb-msngr-logo" alt="facebook-messenger">   
+            </div>
+        </div>
+        <p style="font-size: small; top: 0">Copyright © 2022 Final Frontier.</p>
+    </footer>
 </body>
 </html>
