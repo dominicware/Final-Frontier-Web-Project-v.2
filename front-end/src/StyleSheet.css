@@ -17,6 +17,7 @@ body{
     background-color: var(--white);
     font-family: "Poppins", sans-serif;
 }
+
 a{
     text-decoration: none;
 }
@@ -137,12 +138,27 @@ ul{
     width: 33.3%;
 }
 
+/* Text Styling */
+
+.main-body-text {
+    padding: 0.5%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    font-size: 22px;
+    width: 66%;
+}
+
+.main-body-text img {
+    width: 100%;
+    height: 100%;
+}
+
 @media screen and (min-width: 600px) {
     .nav{
     max-height: none;
     top: 0;
     position: relative;
-    float: right;
+    /* float: right; */
     width: 100%;
     background-color: #030037;
     }
@@ -154,7 +170,6 @@ ul{
     .menu a:hover{
         background-color: transparent;
         color: yellow;
-
     }
 
     .hamb{

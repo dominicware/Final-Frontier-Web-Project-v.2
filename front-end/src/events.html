@@ -1,21 +1,142 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Events</title>
-        <style>
-        </style>
-    </head>
-    <body>
-        <header class="main-header" style="background-color: #000000">
-            <nav>
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
-                </ul>
-            </nav>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Frontier Comics & Toys | Events</title> 
+    <link href="StyleSheet.css" rel="stylesheet">
+    <style>
+        .page-title {
+            text-align: center;
+            font-size: 40px;
+            padding: 2%;
+        }
+
+        .event-description {
+            font-size: 30px;
+            font-weight: bold;
+            background-color: rgb(161, 161, 206);
+            padding: 0.5%;
+            margin-left: 0.5%;
+            margin-right: 0.5%;
+        }
+
+        .event-image {
+            background-color: rgb(206, 206, 230);
+            padding: 0.5%;
+            margin-left: 0.5%;
+            margin-right: 0.5%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            width: 100%;
+            padding: 0px;
+            padding-top: 0px;
+            text-align: center;
+            table-layout: fixed;
+            text-align: left;
+            min-height: 66vh;
+        }
+
+        .grid-item {
+            padding: 5%;
+            border: 1px solid black;
+        }
+
+        .grid-item a {
+            display: block;
+            background-size: cover;
+            background-position: center 0;
+            height: 50vh;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .contact-sub, .name  {
+            font-size: 30px;
+            color: black;
+            padding-bottom: 1.5%;
+            padding-left: 0.5%;
+        }
+
+        .form-label {
+            font-size: 30px;
+            color: black;
+            padding-bottom: 1.5%;
+            padding-top: 1.5%;
+        }
+
+        @media screen and (min-width: 600px) {
+        .grid-container {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        #sitebanner{
+            content:url("static/images/Final Frontier Banner v.2.png");
+        }
+        }
+    </style>
+</head>
+<body style="font-size: 0;">
+    <header class="banner-header">
+        <img alt="banner" id="sitebanner" src="static/images/Final Frontier Phone Banner.png" width="100%" height="100%">
+    </header>
+    <header class="header" style="font-size: 30px;">
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our shops.html">Our Shops</a> </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <main style="font-size: large;">
+        <header class="page-title">
+            <h2>Events</h2>
         </header>
-        <main>
-            <div>Events</div>
-        </main>
-    </body>
+        <div class="contact-intro">
+            <h3 class="contact-sub">There is nothing the comic's industry loves more 
+                than a major event and Final Frontier are no different. </h3>
+            <h3 class="contact-sub">Please find a full list of our upcoming events 
+                below.</h3>
+        </div>
+        <div class="event-description">
+            Sunday March 3rd 2024 - DEVCON '24'
+        </div>
+        <div class="event-image">
+            <a href="https://www.facebook.com/events/271063285859114">
+                <img src="static/images/devcon 24.jpeg" alt="DEVCON '24">
+            </a>
+        </div>
+        <div class="event-description">
+            Sunday September 15th 2024 - DEVCON '24'
+        </div>
+        <div class="event-image">
+            <img src="static/images/devcon 24.jpeg" alt="DEVCON '24">
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="row">
+            <div class="column">
+                <img src="static/images/insta.png" id="insta-logo" alt="instagram">
+            </div>
+            <div class="column">
+                <img src="static/images/fb.png" id="fb-logo" alt="facebook">   
+            </div>
+            <div class="column">
+                <img src="static/images/fbmess.png" id="fb-msngr-logo" alt="facebook-messenger">   
+            </div>
+        </div>
+        <p style="font-size: small; top: 0">Copyright © 2022 Final Frontier.</p>
+    </footer>
+</body>
 </html>
