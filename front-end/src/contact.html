@@ -6,12 +6,6 @@
     <title>Final Frontier Comics & Toys | Contact Us</title> 
     <link href="StyleSheet.css" rel="stylesheet">
     <style>
-        .page-title {
-            text-align: center;
-            font-size: 40px;
-            padding: 2%;
-        }
-
         .contact-form {
             padding: 1%;
             border: 1px solid black;
@@ -20,18 +14,14 @@
         input[type=text] {
             background-color: rgb(204, 217, 228);
             border-color: rgb(179, 179, 179);
-            font-size: 30px;
+            font-size: 20px;
             color: rgba(0, 0, 0, 0.4);
             padding: 0.5%;
             width: 100%;
         }
 
-        .name-input .email-input {
-            width: 50%;
-        }
-
         input[type=submit] {
-            font-size: 30px;
+            font-size: 20px;
         }
 
         .grid-container {
@@ -43,7 +33,7 @@
             text-align: center;
             table-layout: fixed;
             text-align: left;
-            min-height: 66vh;
+            min-height: 33vh;
         }
 
         .grid-item {
@@ -63,18 +53,25 @@
             height: 100%;
         }
 
-        .contact-sub, .name  {
-            font-size: 30px;
-            color: black;
-            padding-bottom: 1.5%;
-            padding-left: 0.5%;
-        }
-
         .form-label {
-            font-size: 30px;
+            font-size: 20px;
             color: black;
             padding-bottom: 1.5%;
             padding-top: 1.5%;
+        }
+
+        .store-header {
+            font-size: 25px;
+            color: black;
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
+        }
+
+        .store-details {
+            font-size: 20px;
+            color: black;
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
         }
 
         @media screen and (min-width: 600px) {
@@ -90,7 +87,7 @@
 </head>
 <body style="font-size: 0;">
     <header class="banner-header">
-        <img alt="banner" id="sitebanner" src="static/images/Final Frontier Phone Banner.png" width="100%" height="100%">
+        <a href="index.html"><img alt="banner" id="sitebanner" src="static/images/Final Frontier Phone Banner.png" width="100%" height="100%"></a>
     </header>
     <header class="header" style="font-size: 30px;">
         <!-- Hamburger icon -->
@@ -109,10 +106,10 @@
         <header class="page-title">
             <h2>Contact Us</h2>
         </header>
-        <div class="contact-intro">
-            <h3 class="contact-sub">If you have any questions at all we'd love to hear from you. 
+        <div class="page-intro">
+            <h3 class="page-sub">If you have any questions at all we'd love to hear from you. 
                 You can contact us using the form below.</h3>
-            <h3 class="contact-sub">Alternatively, if you want to contact our shops
+            <h3 class="page-sub">Alternatively, if you want to contact our shops
                 directly you can find their phone and social media details below.</h3>
         </div>
         <div class="contact-form">
@@ -129,8 +126,26 @@
         </div>
         <div class="grid-container">
             <div class="grid-item">
+                <h3 class="store-header">
+                    Exeter - South Street
+                </h3>
+                <p class="store-details">
+                    <strong>Telephone: </strong>01392 421243
+                </p>
+                <p class="store-details">
+                    <strong>Address: </strong>53 South Street, Exeter, EX1 1EE
+                </p>
             </div>
             <div class="grid-item">
+                <h3 class="store-header">
+                    Plymouth - Cornwall Street
+                </h3>
+                <p class="store-details">
+                    <strong>Telephone: </strong>01752 226660
+                </p>
+                <p class="store-details">
+                    <strong>Address: </strong>117 Cornwall Street, Plymouth, PL1 1PA
+                </p>
             </div>
         </div>
     </main>
@@ -146,7 +161,7 @@
                 <img src="static/images/fbmess.png" id="fb-msngr-logo" alt="facebook-messenger">   
             </div>
         </div>
-        <p style="font-size: small; top: 0">Copyright © 2022 Final Frontier.</p>
+        <p>Copyright © 2024 Final Frontier.</p>
     </footer>
 </body>
 </html>

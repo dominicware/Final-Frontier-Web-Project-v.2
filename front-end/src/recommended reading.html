@@ -6,12 +6,6 @@
     <title>Final Frontier Comics & Toys | Recommended Reads</title> 
     <link href="StyleSheet.css" rel="stylesheet">
     <style>
-        .page-title {
-            text-align: center;
-            font-size: 40px;
-            padding: 2%;
-        }
-
         .grid-container {
             display: grid;
             grid-template-columns: auto;
@@ -35,16 +29,14 @@
             height: 80vh;
         }
 
+        .grid-item p {
+            font-size: 16px;
+        }
+
         .grid-item img {
             width: 100%;
             height: 100%;
-        }
-
-        .contact-sub, .name  {
-            font-size: 30px;
-            color: black;
-            padding-bottom: 1.5%;
-            padding-left: 0.5%;
+            padding-bottom: 5px;
         }
 
         .form-label {
@@ -67,7 +59,7 @@
 </head>
 <body style="font-size: 0;">
     <header class="banner-header">
-        <img alt="banner" id="sitebanner" src="static/images/Final Frontier Phone Banner.png" width="100%" height="100%">
+        <a href="index.html"><img alt="banner" id="sitebanner" src="static/images/Final Frontier Phone Banner.png" width="100%" height="100%"></a>
     </header>
     <header class="header" style="font-size: 30px;">
         <!-- Hamburger icon -->
@@ -86,9 +78,9 @@
         <header class="page-title">
             <h2>Recommended Reads</h2>
         </header>
-        <div class="contact-intro">
-            <h3 class="contact-sub">Check out some of our favourites reads below.</h3>
-            <h3 class="contact-sub">If you are interested in any, <a href="contact.html">just reach out to us</a> and we'll hook you up with a copy.</h3>        
+        <div class="page-intro">
+            <h3 class="page-sub">Check out some of our favourites reads below.</h3>
+            <h3 class="page-sub">If you are interested in any, <a href="contact.html">just reach out to us</a> and we'll hook you up with a copy.</h3>        
         </div>
         <div class="grid-container">
             <div class="grid-item">
@@ -172,7 +164,7 @@
                 <img src="static/images/fbmess.png" id="fb-msngr-logo" alt="facebook-messenger">   
             </div>
         </div>
-        <p style="font-size: small; top: 0">Copyright © 2022 Final Frontier.</p>
+        <p>Copyright © 2024 Final Frontier.</p>
     </footer>
 </body>
 </html>
